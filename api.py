@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
-
+from werkzeug import secure_filename
 
 
 app = Flask(__name__)
@@ -15,7 +15,7 @@ db = SQLAlchemy(app)
 
 
 from users import *
-
+from post import *
 
 if __name__ == '__main__':
     app.run(debug=True)

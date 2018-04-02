@@ -13,4 +13,6 @@ class User(db.Model):
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.String(50))
-    user_id = db.Column(db.Integer)
+    image_filename = db.Column(db.String, default=None, nullable=True)
+    image_url = db.Column(db.String, default=None, nullable=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))

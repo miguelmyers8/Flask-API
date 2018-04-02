@@ -2,12 +2,7 @@ from api import app
 from flask import request, jsonify
 import uuid
 from werkzeug.security import generate_password_hash, check_password_hash
-from models import User, Post
-
-
-
-
-
+from models import User
 
 
 #routes-----------------------------------
