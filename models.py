@@ -1,4 +1,8 @@
 from api import db
+
+
+
+
 #tables------------------------------------
 
 # user table
@@ -8,6 +12,7 @@ class User(db.Model):
     name = db.Column(db.String(50))
     password = db.Column(db.String(80))
     admin = db.Column(db.Boolean)
+    posts = db.relationship('Post', backref='owner')
 
 # post table
 class Post(db.Model):
